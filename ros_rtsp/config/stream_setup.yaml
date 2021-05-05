@@ -1,0 +1,19 @@
+# Set up your streams to rtsp here.
+port: "8554"
+streams: # Cannot rename - must leave this as is.
+
+# direct camera stream
+#  stream-x:
+#    type: cam
+#    source: "v4l2src device=/dev/video0 ! videoconvert ! videoscale ! video/x-raw,framerate=15/1,width=1280,height=720"
+#    mountpoint: /front
+#    bitrate: 500
+
+# topic stream 
+  stream-yay:
+    type: topic
+    source: /camera/image_raw
+    mountpoint: /back
+    caps: video/x-raw,framerate=10/1,width=640,height=480
+    bitrate: 500
+
