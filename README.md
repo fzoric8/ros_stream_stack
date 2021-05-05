@@ -71,3 +71,9 @@ vlc --no-audio --avcodec-hw=any --sout-rtp-proto=udp --network-caching=300 --sou
  - [ ] Test over WiFi
  - [ ] Latency check during test 
  - [ ] Integrate with existing danieli GUI
+
+# Note: 
+Metapackages don't work with 0.6.1 catkin tools which is current default `catkin-tools` version. 
+Therefore, extract packages from metapackage for now. 
+
+
