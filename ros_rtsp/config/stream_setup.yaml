@@ -10,10 +10,16 @@ streams: # Cannot rename - must leave this as is.
 #    bitrate: 500
 
 # topic stream 
-  stream-yay:
+#  stream-yay:
+#    type: topic
+#    source: /camera/image_raw
+#    mountpoint: /back
+#    caps: video/x-raw,framerate=10/1,width=640,height=480
+#    bitrate: 500
+
+  realsense-stream:
     type: topic
-    source: /camera/image_raw
-    mountpoint: /back
+    source: /camera/color/image_raw
+    mountpoint: /main
     caps: video/x-raw,framerate=10/1,width=640,height=480
     bitrate: 500
-
